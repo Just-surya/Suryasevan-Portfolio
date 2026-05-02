@@ -6,18 +6,27 @@ function Sendmail(){
     }
     emailjs.send("service_urspi2g","template_fvh5ouo",params).then(alert("successfully sent"));
 }
-const hamburger = document.getElementById("hamburger");
-const navLinks  = document.getElementById("nav-links");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("open");
-  navLinks.classList.toggle("open");
-});
 
-// Close menu when a link is clicked
-navLinks.querySelectorAll(".nav-card").forEach(link => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("open");
-    navLinks.classList.remove("open");
-  });
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ── Hamburger Menu ──────────────────────────────────
+  const hamburger = document.getElementById("hamburger");
+  const navLinks  = document.getElementById("nav-links");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("open");
+      navLinks.classList.toggle("open");
+    });
+
+    // Close menu when any nav link is clicked
+    navLinks.querySelectorAll(".nav-card").forEach(function (link) {
+      link.addEventListener("click", function () {
+        hamburger.classList.remove("open");
+        navLinks.classList.remove("open");
+      });
+    });
+  }
+
 });
