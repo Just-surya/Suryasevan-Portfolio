@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portstyle1.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+            </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init({
+             publicKey: "580_km1FstooCh7F4",
+             });
+            })();
+        </script>
+        <script src="portfolioscript.js"></script>
+</head>
+<body>
+    <div class="nav-bar">
+      <a href="#home" class="nav-card"><span>Home</span></a>
+      <a href="#about" class="nav-card"><span>About</span></a>
+      <a href="#projects" class="nav-card"><span>Projects</span></a>
+      <a href="#contact" class="nav-card"><span>Contacts</span></a>
+    </div>
+    <section id="home">
+  <div id="photo">
+    <img src="profile.jpeg" id="img">
+  </div>
+
+  <div class="name">
+    <span class="wave">Hai</span> <span class="suryasevan">I'm Suryasevan</span>
+  </div>
+  <p class="tagline">BCA (Hons) student &nbsp;|&nbsp; Passionate Developer &nbsp;|&nbsp; Lifelong Learner<br/>
+        I build clean, functional, and creative web experiences while<br class="br-desktop"/>
+        constantly leveling up my skills.</p>
+  </section>
+    <section id="about">
+        <h3>About Me</h3>
+        <p>Every great experience begins with a story—and I love bringing those stories to life through code.
+I’m a BCA (Hons) student who sees web development as more than just building websites. To me, design sets the mood, logic builds the flow, and interaction shapes the journey. Using HTML, CSS, and JavaScript, I create interfaces that feel smooth, intuitive, and engaging.
+As someone who enjoys stories, I aim to craft digital experiences that guide users naturally and leave a lasting impression. Every project I build is not just functional—it’s something meant to be experienced.</p>
+<h2><strong>Skills</strong></h2>
+          <p><strong>Technical Skills</strong></p>
+    <div class="skills-container">
+  <div class="skill">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+    <p>HTML</p>
+  </div>
+
+  <div class="skill">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+    <p>CSS</p>
+  </div>
+
+  <div class="skill">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+    <p>JavaScript</p>
+  </div>
+</div>
+<p><strong>Soft skills</strong></p>
+<ul>
+  <li>Communication</li>
+  <li>Teamwork</li>
+  <li>Problem Solving</li>
+  <li>Adaptability</li>
+  <li>Time Management</li>
+</ul>
+  </section>
+    <section id="projects">
+      <h3>My Projects</h3> 
+        <div class="projects-container">
+          <div class="project-card">
+            <h3>Simple calculator</h3>
+              <p>A simple calculator built using HTML and CSS focuses on creating the user interface, including buttons, layout, and display screen. HTML structures the calculator, while CSS styles it to make it visually appealing and responsive. To perform actual calculations like addition, subtraction, multiplication, and division, JavaScript is required. This project helps in understanding basic web development concepts such as layout design, user interaction, and event handling.</p>
+          </div>
+        <div class="project-card">
+            <h3>Username/Email Formatter</h3>
+             <p>A username and email formatter is a simple web project built using HTML,Javascript and CSS for the interface, and JavaScript for functionality. It takes user input and formats it into a standardized structure—for example, converting text to lowercase, removing spaces, and generating a valid email format (like `username@gmail.com`). This project helps in understanding input handling, string manipulation, and basic form validation while also improving user experience by ensuring consistent and error-free data entry.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+        <h3>Contact Details</h3>
+        <p>Email: <a href="mailto:suryasevan21@gmail.com">suryasevan21@gmail.com</span></a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/m-j-suryasevan-24530733b">m-j-suryasevan-24530733b</a></p>
+        <p>Phone: <a href="tel:+919947227419">+91 9947227419</a></p>
+    </section>
+    <section id="ContactMe">
+      <h3>Contact me</h3>
+      <div class="contact-info">
+        <p>Feel free to reach out to me for any inquiries, collaborations, or just to say hello!</p>
+      <input type="text" placeholder="Your Name" id="username">
+      <input type="email" placeholder="Your Email" id="useremail">
+      <textarea placeholder="Your Message" id="message"></textarea>
+      <br><br>
+      <button id="Sendbtn" onclick="Sendmail()">Send</button>
+      </div> 
+
+</section>
+</body>
+</html>
