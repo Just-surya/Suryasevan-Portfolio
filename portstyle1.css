@@ -196,6 +196,8 @@ section {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
+/* ── Hamburger Menu ─────────────────────────── */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -213,10 +215,12 @@ section {
   transition: 0.3s;
 }
 
+/* Animate to X when open */
 .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
 
+/* ── Mobile only ────────────────────────────── */
 @media (max-width: 768px) {
   .hamburger { display: flex; }
 
@@ -240,4 +244,23 @@ section {
   .nav-links.open { display: flex; }
 
   .nav-links .nav-card { width: 100%; text-align: center; padding: 12px 0; }
+}
+
+/* ── Desktop override ───────────────────────── */
+@media (min-width: 769px) {
+  .nav-bar {
+    flex-direction: row;
+    align-items: center;
+    padding-right: 100px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
